@@ -1,37 +1,48 @@
-## Welcome to GitHub Pages
+<p align="center"><img src="https://laravel.com/assets/img/components/logo-laravel.svg"></p>
 
-You can use the [editor on GitHub](https://github.com/maharshi-abi/laravel-reactjs-crud/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## Laravel 7.5.2 and React 16.2.0
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+Please follow the guide.
 
-### Markdown
+## Prerequisite
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+1. Make sure you have [composer](https://getcomposer.org/download/) installed.
+2. Make sure you have latest stable version of [node](https://nodejs.org/en/download/) installed.
 
-```markdown
-Syntax highlighted code block
+### Setup and Installation
 
-# Header 1
-## Header 2
-### Header 3
+1. `git clone`
+2. `create a .env file copy content from .env.example and update the values`
+3. `composer install && composer update`
+4. `php artisan migrate:refresh`
+5. `npm install && npm run dev`
+6. `php artisan key:generate`
+7. `php artisan serve`
+8. `npm run watch`
 
-- Bulleted
-- List
+open browser and check the following address
 
-1. Numbered
-2. List
+`http://127.0.0.1:8000`
 
-**Bold** and _Italic_ and `Code` text
+TODO:
 
-[Link](url) and ![Image](src)
-```
+- [x] User Login
+- [x] User Register
+- [x] Blog List
+- [x] Blog Create
+- [x] Blog Remove
+- [ ] Reset Password
+- [ ] Tests
+- [x] Upgrade to Laravel 7
+- [x] Upgrade to React 16.13
+- [x] Axios
+- [x] Inline-CSS
+- [x] Router and Dynamic Routing
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
 
-### Jekyll Themes
+## App Screenshots
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/maharshi-abi/laravel-reactjs-crud/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+<img src="public/image1.png" alt="Laravel React CRUD" />
+<img src="public/image2.png" alt="Laravel React CRUD" />
+<img src="public/image3.png" alt="Laravel React CRUD" />
 
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
