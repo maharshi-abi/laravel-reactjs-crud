@@ -45,4 +45,3 @@ TODO:
 <img src="public/image1.png" alt="Laravel React CRUD" />
 <img src="public/image2.png" alt="Laravel React CRUD" />
 <img src="public/image3.png" alt="Laravel React CRUD" />
-
