@@ -32,8 +32,17 @@ class BlogCreate extends Component{
                 console.log(error);
             });
     }
-    
 
+    copyLinkFn () {
+        var text = document.getElementById("imageLink").innerText;
+        var elem = document.createElement("textarea");
+        document.body.appendChild(elem);
+        elem.value = text;
+        elem.select();
+        document.execCommand("copy");
+        document.body.removeChild(elem);
+        console.log("link copied!");
+    }
 
     render(){
         if(this.state.fireRedirect) {
@@ -47,7 +56,7 @@ class BlogCreate extends Component{
                             <div className="form-group">
                                 <input type="text" placeholder="Image Link" name="image" className="form-control" onChange={this.onChange} required/>
                                 <p>here's a dummy image link:</p> <p id="imageLink" className='text-primary'>https://images.unsplash.com/photo-1549383433-0d8ef3f38afa?ixlib=rb-1.2.1</p> 
-                                <button  className="btn btn-primary" >tap to copy</button>
+                                <button onClick={this.copyLinkFn}  className="btn btn-primary" >tap to copy</button>
                             </div>
                             <div className="form-group">
                                 <input type="text" className="form-control" name="title" placeholder="Blog Title" onChange={this.onChange} required/>
