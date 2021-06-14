@@ -60,7 +60,7 @@ class BlogIndex extends Component{
                     />
                 );
             }else{
-                BlogListData = <h4>No Data Found !!! <br/><hr/><Link  to="/create-post">Create Your Post</Link></h4>;
+                BlogListData = <h4>No Data Found !!! <br/><hr/><Link  to="/create-blog">Create Your Post</Link></h4>;
             }
         }else{
                 BlogListData = <h4>Loading ...</h4>;
