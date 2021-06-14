@@ -23,7 +23,7 @@ const BlogList = (props) => {
                 <div className="blog-entry d-md-flex">
                     <img src={props.image} className="img img-2"  alt={"Blog Data"}/>
                     <div className="text text-2 pl-md-4">
-                        <h3 className="mb-2"><a href="#"> {text_truncate(props.title,40)}</a></h3>
+                        <h3 className="mb-2"><Link to={`/post/${props.id}`}>{text_truncate(props.title,40)} </Link></h3>
                         <div className="meta-wrap">
                             <p className="meta">
                                 <span><i className="icon-calendar mr-2"/>{props.date}</span>
