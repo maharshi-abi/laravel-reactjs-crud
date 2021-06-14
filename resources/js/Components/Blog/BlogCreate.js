@@ -14,6 +14,7 @@ class BlogCreate extends Component{
         };
     }
 
+
     onChange(e){
         this.setState({ [e.target.name]: e.target.value });
     }
@@ -31,6 +32,8 @@ class BlogCreate extends Component{
                 console.log(error);
             });
     }
+    
+
 
     render(){
         if(this.state.fireRedirect) {
@@ -42,13 +45,15 @@ class BlogCreate extends Component{
                     <div className="col-lg-12 d-flex">
                         <form onSubmit={this.handleSubmit} className="bg-light p-5 contact-form col-md-12">
                             <div className="form-group">
-                                <input type="text" placeholder="Image Link" name="image" className="form-control" onChange={this.onChange}/>
+                                <input type="text" placeholder="Image Link" name="image" className="form-control" onChange={this.onChange} required/>
+                                <p>here's a dummy image link:</p> <p id="imageLink" className='text-primary'>https://images.unsplash.com/photo-1549383433-0d8ef3f38afa?ixlib=rb-1.2.1</p> 
+                                <button  className="btn btn-primary" >tap to copy</button>
                             </div>
                             <div className="form-group">
-                                <input type="text" className="form-control" name="title" placeholder="Blog Title" onChange={this.onChange}/>
+                                <input type="text" className="form-control" name="title" placeholder="Blog Title" onChange={this.onChange} required/>
                             </div>
                             <div className="form-group">
-                                <textarea name="description" cols="30" rows="7" className="form-control" placeholder="Description" onChange={this.onChange}/>
+                                <textarea name="description" cols="30" rows="7" className="form-control" placeholder="Description" onChange={this.onChange} required/>
                             </div>
                             <div className="form-group">
                                 <button type="submit" className="btn btn-primary py-3 px-5">Create Post</button>
